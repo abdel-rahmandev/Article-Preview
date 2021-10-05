@@ -25,6 +25,7 @@ main {
   object-position: left;
   border-top-left-radius: 10px;
   border-bottom-left-radius: 10px;
+  filter: brightness(1.05);
 }
 .card .content {
   padding: 40px;
@@ -75,19 +76,23 @@ p {
   width: 35px;
   height: 35px;
   margin-left: auto;
-  align-self: center;
-  border: none;
   border-radius: 50%;
   cursor: pointer;
   position: relative;
   right: 15px;
   z-index: 3;
   transition: 0.5s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  user-select: none;
 }
-.share-btn.active {
+.share-btn.active,
+.share-btn:hover {
   background-color: hsl(214, 17%, 51%);
 }
-.share-btn.active img {
+.share-btn.active img,
+.share-btn:hover img {
   filter: brightness(3);
 }
 .social-share {
